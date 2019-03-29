@@ -67,7 +67,7 @@ class Main extends PluginBase implements Listener {
 	}
 
 	public static function addsc(Player $p){
-        ScoreFactory::setScore($p, "§6§lOWPE §bDev§cStats");
+        ScoreFactory::setScore($p, "§bDev§cStats");
         Main::stats($p);
     }
 
