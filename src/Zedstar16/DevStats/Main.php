@@ -102,7 +102,7 @@ class Main extends PluginBase implements Listener {
         }
 
 	    $data = [
-	        "Load" => $s->getTickUsage(),
+	    "Load" => $s->getTickUsage(),
             "TPS" => $s->getTicksPerSecond(),
             "InUseMemory" => (round($memory[0]/1000000)),
             "TotalMemoryAvailable" => (round($memory[2]/1000000)),
