@@ -12,13 +12,12 @@ If command is not run by player, a message detailing the stats will be sent
 
 ## Displayed on ScoreBoard:
 - Load
-- TPS-
+- TPS
+- Network Upload (KB/s)
+- Network Download (KB/s)
 - Memory In Use
 - Total Memory
 - Loaded Levels
 - Online Players
 - Entities
 - Live Entities
-
-## TODO:
-- Network Statistics
