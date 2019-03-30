@@ -80,7 +80,7 @@ class Main extends PluginBase implements Listener
 
     public static function addsc(Player $p)
     {
-        ScoreFactory::setScore($p, "§6§lOWPE §bDev§cStats");
+        ScoreFactory::setScore($p, "§bDev§cStats");
         Main::stats($p);
     }
 
@@ -88,16 +88,16 @@ class Main extends PluginBase implements Listener
     {
         $data = Main::getStats();
         ScoreFactory::setScoreLine($p, 1, "§cPing: §f" . $p->getPing() . " ms");
-        ScoreFactory::setScoreLine($p, 2, "§6Load: §f$data[Load]");
-        ScoreFactory::setScoreLine($p, 3, "§eNetwork Upload: §f$data[NetworkUpload] KB/s");
-        ScoreFactory::setScoreLine($p, 4, "§aNetwork Download: §f$data[NetworkDownload] KB/s");
+        ScoreFactory::setScoreLine($p, 2, "§6Load: §f$data[Load]%%");
+        ScoreFactory::setScoreLine($p, 3, "§eUpload: §f$data[NetworkUpload] KB/s");
+        ScoreFactory::setScoreLine($p, 4, "§aDownload: §f$data[NetworkDownload] KB/s");
         ScoreFactory::setScoreLine($p, 5, "§bTPS: §f$data[TPS]");
         ScoreFactory::setScoreLine($p, 6, "§dMemory In Use: §f$data[InUseMemory] MB ");
-        ScoreFactory::setScoreLine($p, 7, "§9Total Memory: §f$data[TotalMemoryAvailable] MB ");
-        ScoreFactory::setScoreLine($p, 8, "§cLevels Loaded: §f$data[LoadedLevels]");
-        ScoreFactory::setScoreLine($p, 9, "§6Online: §f$data[OnlinePlayers]");
-        ScoreFactory::setScoreLine($p, 10, "§eEntities: §f$data[Entites]");
-        ScoreFactory::setScoreLine($p, 11, "§aLive Entities: §f$data[LiveEntites]");
+        ScoreFactory::setScoreLine($p, 7, "§cTotal Memory: §f$data[TotalMemoryAvailable] MB ");
+        ScoreFactory::setScoreLine($p, 8, "§6Levels Loaded: §f$data[LoadedLevels]");
+        ScoreFactory::setScoreLine($p, 9, "§eOnline: §f$data[OnlinePlayers]");
+        ScoreFactory::setScoreLine($p, 10, "§aEntities: §f$data[Entites]");
+        ScoreFactory::setScoreLine($p, 11, "§bLive Entities: §f$data[LiveEntites]");
     }
 
     public static function getStats(): array
@@ -141,4 +141,3 @@ class Main extends PluginBase implements Listener
         return $data;
     }
 }
-
